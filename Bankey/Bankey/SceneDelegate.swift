@@ -31,8 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     onboardingViewController.delegate = self
     dummyViewController.logoutDelegate = self
     
-    window?.rootViewController = mainViewCotroller
-    mainViewCotroller.selectedIndex = 2
+    window?.rootViewController = AccountSummaryViewController()
+    mainViewCotroller.selectedIndex = 0
   }
 }
 
