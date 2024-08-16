@@ -16,7 +16,6 @@ class LoginView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
     style()
     layout()
   }
