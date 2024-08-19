@@ -20,9 +20,9 @@ class AccountSummaryCell: UITableViewCell {
     let accountName: String
     let balance: Decimal
     
-//    var balanceAsAttributedString: NSAttributedString {
-//      return CurrencyFormater().makeAttributedCurrency(balance)
-//    }
+    var balanceAsAttributedString: NSAttributedString {
+      return CurrencyFormatter().makeAttributedCurrency(balance)
+    }
   }
   
   let viewModel: ViewModel? = nil
@@ -96,7 +96,8 @@ extension AccountSummaryCell {
     
     balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
     balanceAmountLabel.textAlignment = .right
-    balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "23")
+    balanceAmountLabel.text = "$XXX.XXX.XX"
+    balanceAmountLabel.numberOfLines = 0
     
     chevronImageView.translatesAutoresizingMaskIntoConstraints = false
     let chevronImage = UIImage(systemName: "chevron.right")
@@ -145,7 +146,7 @@ extension AccountSummaryCell {
   func configure(with vm: ViewModel) {
     typeLabel.text = vm.accountType.rawValue
     nameLabel.text = vm.accountName
-    //balanceAmountLabel.attributedText = vm.balanceAsAttributedString
+    balanceAmountLabel.attributedText = vm.balanceAsAttributedString
     
     switch vm.accountType {
     case .Banking:
@@ -153,7 +154,7 @@ extension AccountSummaryCell {
       balanceLabel.text = "Current balance"
     case .CreditCard:
       underlineView.backgroundColor = .systemOrange
-      balanceLabel.text = "Balance"
+      balanceLabel.text = "Current Balance"
     case .Investment:
       underlineView.backgroundColor = .systemPurple
       balanceLabel.text = "Value"
