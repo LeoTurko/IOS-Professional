@@ -30,13 +30,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     loginViewController.delegate = self
     onboardingViewController.delegate = self
     
-    let vc = mainViewCotroller
-    vc.setStatusBar()
-    
+    displayLogin()
+  }
+}
+
+extension SceneDelegate {
+  private func displayLogin() {
+    setRootViewController(loginViewController)
+  }
+  
+  private func displayNextScreen() {
+    if LocalState.hasOnboarded {
+      prepMainView()
+      setRootViewController(mainViewCotroller)
+    } else {
+      setRootViewController(onboardingViewController)
+    }
+  }
+  
+  private func prepMainView() {
+    mainViewCotroller.setStatusBar()
     UINavigationBar.appearance().isTranslucent = false
     UINavigationBar.appearance().backgroundColor = appColor
-    
-    window?.rootViewController = vc
   }
 }
 
@@ -61,17 +76,14 @@ extension SceneDelegate {
 
 extension SceneDelegate: LoginViewControllerDelegate {
   func didLogin() {
-    if LocalState.hasOnboarded {
-      setRootViewController(mainViewCotroller)
-    } else {
-      setRootViewController(onboardingViewController)
-    }
+    displayNextScreen()
   }
 }
 
 extension SceneDelegate: OnboardingContainerViewControllerDelegate {
   func didFinishOnboarding() {
     LocalState.hasOnboarded = true
+    prepMainView()
     setRootViewController(mainViewCotroller)
   }
 }
