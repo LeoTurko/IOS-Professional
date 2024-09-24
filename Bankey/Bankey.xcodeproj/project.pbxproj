@@ -25,6 +25,8 @@
 		BF6137F62C738317001689D0 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6137F52C738317001689D0 /* DecimalUtils.swift */; };
 		BF6137F82C738414001689D0 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6137F72C738414001689D0 /* CurrencyFormatter.swift */; };
 		BF6138822C7D1754001689D0 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6138812C7D1754001689D0 /* CurrencyFormatterTests.swift */; };
+		BF72C90F2CA0AEC30055525F /* SceletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72C90E2CA0AEC30055525F /* SceletonLoadable.swift */; };
+		BF72C9112CA0B0370055525F /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72C9102CA0B0370055525F /* SkeletonCell.swift */; };
 		BF808A002C653AB800151799 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8089FF2C653AB800151799 /* AccountSummaryViewController.swift */; };
 		BFC145892C6CCF27006B8C93 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC145882C6CCF27006B8C93 /* AccountSummaryCell.swift */; };
 		BFE70A9F2C220E5200F84BEE /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE70A9E2C220E5200F84BEE /* OnboardingContainerViewController.swift */; };
@@ -67,6 +69,8 @@
 		BF6137F72C738414001689D0 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		BF6138782C7D15F4001689D0 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6138812C7D1754001689D0 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
+		BF72C90E2CA0AEC30055525F /* SceletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceletonLoadable.swift; sourceTree = "<group>"; };
+		BF72C9102CA0B0370055525F /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		BF8089FF2C653AB800151799 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		BFC145882C6CCF27006B8C93 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		BFE70A9E2C220E5200F84BEE /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				BFC145882C6CCF27006B8C93 /* AccountSummaryCell.swift */,
+				BF72C90E2CA0AEC30055525F /* SceletonLoadable.swift */,
+				BF72C9102CA0B0370055525F /* SkeletonCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -351,6 +357,8 @@
 				BFE70A9F2C220E5200F84BEE /* OnboardingContainerViewController.swift in Sources */,
 				BF5157AE2C8650F1008A1E8F /* UITextField+SecureToggle.swift in Sources */,
 				BF1968852BF7E7E6003A99DC /* SceneDelegate.swift in Sources */,
+				BF72C90F2CA0AEC30055525F /* SceletonLoadable.swift in Sources */,
+				BF72C9112CA0B0370055525F /* SkeletonCell.swift in Sources */,
 				BF5157A02C82597C008A1E8F /* NSNotificationName.swift in Sources */,
 				BF808A002C653AB800151799 /* AccountSummaryViewController.swift in Sources */,
 				BFE70B262C510C4D00F84BEE /* LocalState.swift in Sources */,
